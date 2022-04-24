@@ -1,0 +1,22 @@
+const mongoose = require('mongoose');
+
+const NodesSchema = new Schema({
+    title:{
+        type: String,
+        required: true
+    },
+    description:{
+        type: String,
+        required: true
+    },
+    tag:{
+        type: String,
+        default: "General"
+    },
+    date:{
+        type: String,
+        default: Date.now
+    },
+})
+
+module.exports = mongoose.model('user',NodesSchema); 
